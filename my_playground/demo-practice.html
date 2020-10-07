@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/demo-css.css">
+    <title>Grid Demo</title>
+    <style>
+        .container{
+            border: solid blue;
+        }
+        .row{
+            border: solid orangered;
+        }
+        .row div{
+            border: solid cyan;
+        }
+    </style>
+</head>
+<body>
+<header class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1>This is a Head:</h1>
+                <h2>With a little saying</h2>
+            </div>
+        </div>
+    </div>
+</header>
+<nav>    
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h4>Click This</h4>
+            </div>
+            <div class="col">
+                <h4>Click This</h4>
+            </div>
+            <div class="col">
+                <h4>Click This</h4>
+            </div>
+        </div>
+    </div>
+</nav>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img src="https://imgs.classicfm.com/images/61630?width=1000&crop=16_9&signature=UOxsAc4VhzNYQEIG-RTXur_mix8=" 
+                alt="View Online" width= 500px height= 200px class="responsive">         
+            </div>
+            <div class="col">
+                <p>This can be a whole paragraph extending down as far as you like. It can be shorter, or longer than the picture to the left.</p>
+                <p>You can start another paragraph with another "p" element.</p>
+                <p>Also if you want to make the picture and the article to the right be the same size, you can resize the picture to fit the size of the text vertically. And depending on the layout you want, you can change the col spans for the text and picture.</p>
+                <p>We also added a class to the img of container. So in the CSS page we apply a width and height so the image becomes responsive with screen size.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-3">
+                <p>This is an example where the pictures is not resized. So this is the default size of the picture.</p>
+                <p>Also the container is fluid, so it stretches across the whole page.</p>
+                <p>Lastly the col in this column is set to three, so all of this text only takes up one-third of the twelve columns that can go into this row.</p>
+                <p>Again we also added a class to the img of container. So in the CSS page we apply a width and height so the image becomes responsive with screen size</p>
+            </div>
+            <div class=col>
+                <img src="https://imgs.classicfm.com/images/61630?width=1000&crop=16_9&signature=UOxsAc4VhzNYQEIG-RTXur_mix8=" 
+                alt="Online picture" class="responsive">
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">1 This is supposed to be</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+            <div class="col">6</div>
+            <div class="col">7</div>
+            <div class="col">8</div>
+            <div class="col">9</div>
+            <div class="col">10</div>
+            <div class="col">11</div>
+            <div class="col">12</div>
+        </div>
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+        </div>
+        <div class="row">
+            <div class="col">1</div>
+            <div class="col">2</div>
+            <div class="col">3</div>
+            <div class="col">4</div>
+            <div class="col">5</div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>This is a container with multiple rows, with different amounts of columns in it.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-sm-4 order-sm-last col-md-3">
+                <p class="text-small-right">This text is small and to the right. It does this because we have the order-sm-last specified in the column class. Which means on a screen small or up, it will be on the right.</p>
+            </div>
+            <div class="col">
+                <h3>Even though this column comes after the last,</h3>
+                <h5>Both items in this column are on the left because we specified for the first column to be on the right with the column class "order-sm-last<h5>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col order-last">
+                <p class="text-right">This text will be on the right, even though it is made in the first column of the row. Because of the column class "col order-last".</p>
+            </div>
+            <div class="col-6 order-first">
+                <p class="text-left">This text will be on the left even though it is the second column. Because of the column class "col order-first".</p>
+            </div>
+            <div class="col-4">
+                <p>Finally this text is in the middle because the first two columns are specified in the column class, and this one is not.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p>You can also specify how many column take up depending on screen size</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-sm-2">
+                <p>This column will be 2 slots from small and up, but 5 slots for screens large and up.</p>
+            </div>
+            <div class="col-sm-6 order-last col-lg-3">
+                <p>This column will be 6 slots for small and up, but 3 slots for large and up.</p>
+            </div>
+            <div class="col">
+                <p>This column will take up the leftover space because the other two are specified, and this is not.</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

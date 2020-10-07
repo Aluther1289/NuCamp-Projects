@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!--npm init /to install package.json-->
+  <!--npm install lite-server@2.5.4 --save-dev /this installs the lite server-->
+  <!--npm install bootstrap@4.5.0 /this installs the bootstrap-->
+  <!--npm install jquery@3.5.1 popper.js@1.16.1 /this installs jquery-->
+  <!--npm start /runs the page in lite server-->
+  <!--npm install font-awesome@4.7.0/ this installs font icons used for icons on the page.-->
+
+  <!--Make sure to add a description in package.json, change "main": "index.js" to  "index.html".
+And in scripts add "lite": "lite-server", and "start": "npm run lite", . Always make sure to add
+the commas after the lines, except for the last line in the script section.-->
+  <!--You can also add your name in the "author" section-->
+  <head>
+    <!--Required meta tags always come first-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!--Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+
+    <!--Additional CSS must be placed after Bootstrap CSS-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/font-awesome/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap-social/bootstrap-social.css"
+    />
+
+    <title>NuCamp A Better Way To Camp</title>
+  </head>
+
+  <body>
+    <!--Here we added the class jumbotron, to make the header stand out and draw attention..-->
+    <header class="jumbotron jumbotron-fluid">
+      <!--Here we add the class container. To tell the server we want these to start the bootstrap grid.-->
+      <div class="container">
+        <!--Here we add the class row, this says that this is a row that will contain columns.-->
+        <div class="row">
+          <!--Here we add a logo to the Header to give the page more form. We give it col-4 to specify for it to take up 4 spots for x-small viewports. Then col-sm-3
+                so it takes 3 spots on small viewports. Then col-md-2 to only take up 2 spots in medium and up viewports.-->
+          <div class="col-4 col-sm-3 col-md-2 align-self-center">
+            <img src="img/logo.png" class="img-fluid" />
+          </div>
+          <!--Last we add the class col to specify our columns for the row, which contain all the data we are putting on the page.-->
+          <div class="col">
+            <h1>NuCamp:</h1>
+            <h2>a better way to camp</h2>
+          </div>
+          <div class="col-md-4 col-xl-2">
+              <a type="button" class="btn btn-primary mt-4" role="button" href="#reserveForm">Reserve Campsite</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Add a nav element to put a navbar on the page to help direct users to where they want to go. The navbar-expand-sm means that
+    the navbar will be expanded on small viewports and up. navbar-dark means the items will be lighter, to make them more visible since our
+    navbar color is darker. sticky-top makes the navbar stay at the top of screen, no matter how far down the page the user is.-->
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+      <!--You want to put a navbar in it's own container. This puts padding on the items in the navbar.-->
+      <div class="container">
+        <!--Here we are adding an image to the navbar. The class "navbar brand". The image source from our image folder. And we give it height and width
+            specifications so that the image is not too large. We have to put an <a> element so we can have it direct you to somewhere with the href attribute.-->
+        <a class="navbar-brand" href="#"
+          ><img src="img/logo.png" height="30" width="30"
+        /></a>
+        <!--Here we add a button that will show up when the viewport is less than small. With the data-toggle "collapse", the data-target
+            of "#nucampNavbar" creates a tag for this button you put on the div element of the list of the items in the nav section. The "ml-auto"
+            class moves the toggle button to the right of the navbar when the viewport is smaller than small.-->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#nucampNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--You want to put this all in it's own div element. Give it a class of "navbar-collapse" and a class of "collapse", so it knows what it is doing.
+                You also give it the id of "nucampNavbar" to tag it with the id you created above in the data-target for the button.-->
+        <div class="collapse navbar-collapse" id="nucampNavbar">
+          <!--Use an unordered list to make these items easily ordered. The navbar-nav class tells it to expand on viewports small and up.-->
+          <ul class="navbar-nav">
+            <!--Use hrefs to link the words to the pages they correspond to. Give them all classes of nav-item to help with appearance,
+                        and in the <a> elements add class of nav-link, also helps with appearance of the navbar.-->
+            <li class="nav-item active">
+              <a class="nav-link" href="#"
+                ><i class="fa fa-home fa-lg"></i> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutus.html"
+                ><i class="fa fa-info fa-lg"></i> About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><i class="fa fa-list fa-lg"></i> Sites</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html"
+                ><i class="fa fa-address-card fa-lg"></i> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <!--Notice we added a row-content class to some rows. This is for CSS purposes.-->
+      <div class="row row-content align-items-center">
+        <!--We add col-sm-4 to specify that when the page is small or higher, this 1st column will take up 3 out of the 12 spots. Then we specify
+            col-md-3 to say when viewed at medium or higher it will take up 4 of the 12.-->
+        <!--Notice we also put the order-sm-last call in there. This only applies to small viewpoints and up.-->
+        <div class="col-sm-4 order-sm-last col-md-3">
+          <h2 class="text-sm-right">Discover & Review</h2>
+        </div>
+        <!--This is the second column in this row. Since we don't specify a size for it, it will take up the remainder of the 12
+            spots that were not used in from the first column above.-->
+        <div class="col">
+          <div class="media">
+            <img
+              class="d-flex mr-3 img-thumbnail"
+              src="img/breadcrumb-trail-thumb.jpg"
+              alt="Breadcrumb Trail"
+            />
+            <div class="media-body align-self-center">
+              <h3>Our Campsites</h3>
+              <p class="d-none d-sm-block">
+                Explore our growing database of curated campsites and leave your
+                own reviews!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--Here we made another row, but still in the same container as the previous row and columns.-->
+      <!--This row also has the class row-content for CSS.-->
+      <div class="row row-content align-items-center">
+        <!--These columns have the same specs as the one we just made previously.-->
+        <div class="col-sm-4 order-sm-first col-md-3">
+          <h2>Featured Campsites</h2>
+        </div>
+        <!--Notice the subject of this section is in the specified column above, and the less important information
+            takes up the remaining column slots below.-->
+        <div class="col">
+            <div class="media">
+                <div class="media-body align-self-center">
+                    <h3>React Lake Campground</h3>
+                    <p class="d-none d-sm-block">
+                    Nestled in the foothills of the Chrome Mountains, this campground on
+                    the shores of the pristine React Lake is a favorite for fly fishers.
+                    </p>
+                </div>
+                <img class="d-flex ml-3 img-thumbnail" 
+                src="img/react-lake-thumb.jpg" 
+                alt="React Lake" 
+                />
+            </div>
+        </div>
+      </div>
+
+      <!--Another row in the same container as the last two.-->
+      <div class="row row-content align-items-center">
+        <!--These columns again have the same specs as the two before.-->
+        <!--Notice we also put order-sm-last on this column too. Which again is only applied to small viewpoints and up.-->
+        <div class="col-sm-4 order-sm-last col-md-3">
+          <h2 class="text-sm-right">Our Community Partners</h2>
+        </div>
+        <!--Notice how we put the Topic of these rows in the first specified columns, and the information in the rest of the columns. This makes for easier 
+            and more pleasurable viewing for the users.-->
+        <div class="col">
+            <!--We wrap this all in a media div.-->
+            <div class="media">
+            <!--The classes d-flex is recommended from bootstrap that fixes a bug in internet explorer, mr-3 means adds a margin to the right, image thumbnail gives rounded border-->
+            <img
+              class="d-flex mr-3 img-thumbnail"
+              src="img/bootstrap-thumb.png"
+              alt="Bootstrap Outfitters"
+            />
+            <!--We put the words in div itself too. Put a "media-body" class on it to show it is text for the image. Align-self-center gives it alignment properties.-->
+            <div class="media-body align-self-center">
+              <h3>Bootstrap Outfitters</h3>
+              <p class="d-none d-sm-block">
+                Bootstrap Outfitters supplies you with gear you need at prices
+                you can't beat.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row row-content align-items-center">
+        <div class="col-sm-6 mx-auto">
+            <div class="card">
+                <h3 class="card-header bg-primary text-white">Reserve a Campsite</h3>
+                <div class="card-body">
+                    <form id="reserveForm">
+                        <div class="form-group row">
+                            <label for="numCampers" class="col-sm-6 col-form-label.">Number of Campers</label>
+                            <div class="col">
+                                <select name="numCampers" id="numCampers" class="form-control">
+                                    <option value="select">Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
+                            <div class="col">
+                                <input type="date" id="date" name="date" placeholder="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                                <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div> 
+      </div>
+
+    </div>
+
+    <footer class="site-footer">
+      <!--Here we make a container for all of the information below.-->
+      <div class="container">
+        <!--We need to create a row for all the columns.-->
+        <div class="row">
+          <!--For this column, we specify that for extra small viewpoint, this column will take up 4 slots. And if the viewpoint is small or higher, it 
+                will take up 2 slots.-->
+          <!--Notice we also put an offset-1 on this column. Offset classes forces a bootstrap column to move to the right.-->
+          <div class="col-4 col-sm-2 offset-1">
+            <h5>Links</h5>
+            <!--Adding the class "list-unstyled" makes the bullets on the list disappear. Non visual.-->
+            <ul class="list-unstyled">
+              <li><a href="#">Home</a></li>
+              <li><a href="aboutus.html">About</a></li>
+              <li><a href="#">Sites</a></li>
+              <li><a href="contactus.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <!--For the second column, we specify that in extra small viewpoint, this column will take up 6 slots. And in small or higher viewpoint, then 
+                this column will take up 5 slots.-->
+          <div class="col-6 col-sm-5 text-center">
+            <h5>Social</h5>
+            <a
+              class="btn btn-social-icon btn-instagram"
+              href="http://instagram.com/"
+              ><i class="fa fa-instagram"></i
+            ></a>
+            <a
+              class="btn btn-social-icon btn-facebook"
+              href="http://facebook.com/"
+              ><i class="fa fa-facebook"></i
+            ></a>
+            <a
+              class="btn btn-social-icon btn-twitter"
+              href="http://twitter.com/"
+              ><i class="fa fa-twitter"></i
+            ></a>
+            <a class="btn btn-social-icon btn-google" href="http://youtube.com/"
+              ><i class="fa fa-youtube"></i
+            ></a>
+          </div>
+          <div class="col-sm-4 text-center">
+            <a role="button" class="btn btn-link" href="tel:+12065551234"
+              ><i class="fa fa-phone"></i> 1-206-555-1234
+            </a>
+            <br />
+            <a
+              role="button"
+              class="btn btn-link"
+              href="mailto:campsites@nucamp.co"
+              ><i class="fa fa-envelope-o"></i> campsites@nucamp.co
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
