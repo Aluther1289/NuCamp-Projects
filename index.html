@@ -175,6 +175,61 @@ the commas after the lines, except for the last line in the script section.-->
     </div>
 
     <div class="container">
+      <!--Here we are adding a <div> for the carousel. With the classes "row" and "row-content".-->
+      <div class="row row-content">
+        <!--We make another div with the classes "col-md-8", to set up the column to take up 8 spots on medium and up viewports. And "mx-auto" to 
+        horizontally center the carousel.-->
+        <div class="col-md-8 mx-auto">
+          <!--Here we set up the basic carousel. With an id of "homeCarousel", a class of "carousel slide", and a data-ride of"carousel".-->
+          <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+            <!--Right under the carousel start div, we add the carousel indicators. Wes et the data-target as "#homeCarousel", the data-slide-to as "0" to "2", and the first one gets the class
+            of active.-->
+            <ol class="carousel-indicators">
+              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#homeCarousel" data-slide-to="1"></li>
+              <li data-target="#homeCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <!--Here we are adding a div element for the image properties. So we put the classes of "-->
+              <div class="carousel-item active">
+                <!--Here we add the img element, with the classes "d-block" and "w-100". The d-block and w-100 classes are Bootstrap display and 
+                sizing utility classes. They set the image display property to block and the image width property to 100%, which prevents the browser's default image alignment from interfering. -->
+                <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
+                  <div class="carousel-caption">
+                    <h3>Breadcrumb Trail Campground</h3>
+                    <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground. </p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
+                  <div class="carousel-caption">
+                    <h3>React Lake Campground</h3>
+                    <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                  </div>
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
+                  <div class="carousel-caption">
+                    <h3>Chrome River Campground</h3>
+                    <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth first at this enchanting spot by the Chrome River.</p>
+                  </div>
+              </div>
+            </div>
+            <!--Between the end tag for the carousel-inner div and the end tag for the carousel div, we add the controls for the carousel. We use an <a> element with the classes of "carousel-control-prev"
+              for previous. With an href of "#homeCarousel", a role of "button", and a data-slide of "prev".-->
+            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+              <!--Here we add the <span> element with the class of "carousel-control-prev-icon". This makes the actual button.-->
+              <span class="carousel-control-prev-icon"></span>
+              <!--Ths is text that actual screen readers would see.-->
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+      </div>      
       <!--Notice we added a row-content class to some rows. This is for CSS purposes.-->
       <div class="row row-content align-items-center">
         <!--We add col-sm-4 to specify that when the page is small or higher, this 1st column will take up 3 out of the 12 spots. Then we specify
