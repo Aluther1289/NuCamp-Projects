@@ -58,12 +58,119 @@ the commas after the lines, except for the last line in the script section.-->
             <h2>a better way to camp</h2>
           </div>
           <div class="col-md-4 col-xl-2 mt-4">
-              <a href="#reserveForm" role="button" class="btn btn-lg btn-info" data-toggle="tooltip" data-placement="bottom" 
-              data-html="true" title="Or call us at <br><strong>1-206-555-1234</strong>">Reserve Campsite</a>
+              <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
           </div>
         </div>
       </div>
     </header>
+
+    <div id="reserveModal" class="modal fade" role="dialog">
+      <!--Then another div with the class of "modal-dialog" and a role of "document"-->
+      <div class="modal-dialog modal-lg" role="document">
+        <!--Another div with the class of "modal-content"-->
+        <div class="modal-content">
+          <!--Next we add a div for the class of "modal-header"-->
+          <div class="modal-header bg-info text-white">
+            <!--Here we add an h3 element with the class of "modal-title" and the content of Login-->
+            <h3 class="modal-title">Reserve</h3>
+            <!--Now we add a button element. type of "button", class of "close", data-dismiss of "modal", then the content of "&times" to make an "x" symbol.-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!--Here we set up the "modal-body" with a div element and class.-->
+          <div class="modal-body">
+            <!--We put this in it's own container with a class of "container-fluid"-->
+            <div class="container-fluid">
+              <!--Now we add a form element for the user to fill out.-->
+              <form>
+                <div class="form-group row">
+                            <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
+                            <div class="col">
+                                <select name="numCampers" id="numCampers" class="form-control">
+                                    <option value="select">Select...</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="date" class="col-sm-6 col-form-label">Date</label>
+                            <div class="col">
+                                <input type="date" id="date" name="date" placeholder="date" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-sm-6">Campsite Type</label>
+                            <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-success active">
+                                  <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
+                                </label>
+                                <label class="btn btn-primary">
+                                  <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off"> RV
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col">
+                              <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>  
+                              <button type="submit" class="btn btn-primary">Search</button>
+                            </div>
+                        </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="loginModal" class="modal fade" role="dialog">
+      <!--Then another div with the class of "modal-dialog" and a role of "document"-->
+      <div class="modal-dialog" role="document">
+        <!--Another div with the class of "modal-content"-->
+        <div class="modal-content">
+          <!--Next we add a div for the class of "modal-header"-->
+          <div class="modal-header">
+            <!--Here we add an h3 element with the class of "modal-title" and the content of Login-->
+            <h3 class="modal-title">Login</h3>
+            <!--Now we add a button element. type of "button", class of "close", data-dismiss of "modal", then the content of "&times" to make an "x" symbol.-->
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!--Here we set up the "modal-body" with a div element and class.-->
+          <div class="modal-body">
+            <!--We put this in it's own container with a class of "container-fluid"-->
+            <div class="container-fluid">
+              <!--Now we add a form element for the user to fill out.-->
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="loginEmail">Email address</label>
+                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                  </div>
+                  <div class="form-group col-12">
+                    <label class="sr-only" for="loginPassword">Password</label>
+                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                  </div>
+                  <div class="col">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox">
+                      <label class="form-check-label"> Remember Me</label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--Add a nav element to put a navbar on the page to help direct users to where they want to go. The navbar-expand-sm means that
     the navbar will be expanded on small viewports and up. navbar-dark means the items will be lighter, to make them more visible since our
@@ -313,44 +420,6 @@ the commas after the lines, except for the last line in the script section.-->
           </div>
         </div>
       </div>
-      
-      <div class="row row-content align-items-center">
-        <div class="col-sm-6 mx-auto">
-            <div class="card">
-                <h3 class="card-header bg-primary text-white">Reserve a Campsite</h3>
-                <div class="card-body">
-                    <form id="reserveForm">
-                        <div class="form-group row">
-                            <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                            <div class="col">
-                                <select name="numCampers" id="numCampers" class="form-control">
-                                    <option value="select">Select...</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-sm-6 col-form-label">Date</label>
-                            <div class="col">
-                                <input type="date" id="date" name="date" placeholder="date" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col">
-                                <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div> 
-      </div>
-
     </div>
 
     <footer class="site-footer">
@@ -417,9 +486,9 @@ the commas after the lines, except for the last line in the script section.-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
+      $(function(){
+
+      }
     </script>
 
   </body>
