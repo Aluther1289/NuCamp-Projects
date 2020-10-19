@@ -334,6 +334,18 @@ the commas after the lines, except for the last line in the script section.-->
               <span class="carousel-control-next-icon"></span>
               <span class="sr-only">Next</span>
             </a>
+            <!--Here we add another div so we can add play and pause buttons to the carousel. We give it a class of "btn-group", and an id of "carouselButton"-->
+            <div class="btn-group" id="carouselButton">
+              <!--Here we are adding the pause button. We use a button element, with the classes of "btn", "btn-danger" for the color to be red, and "btn-sm" for it to be small.
+              We also give it the id of "carouselPause".-->
+              <button class="btn btn-danger btn-sm" id="carouselPause">
+                <!--Here we use an <i> element to put on the bootstrap classes of "fa" and "fa-pause"-->
+                <i class="fa fa-pause"></i>
+              </button>
+              <button class="btn btn-danger btn-sm" id="carouselPlay">
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>      
@@ -486,9 +498,20 @@ the commas after the lines, except for the last line in the script section.-->
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <script>
-      $(function(){
+      //$(function(){
 
-      }
+      //}
+
+      //Here we add the JQuery function to make the play and pause buttons work in the carousel.
+      $(function() {
+        $(".carousel").carousel( { interval: 2000} );
+        $("#carouselPause").click(function(){
+          $(".carousel").carousel("pause");
+        });
+        $("#carouselPlay").click(function(){
+          $(".carousel").carousel("cycle");
+        });
+      });
     </script>
 
   </body>
