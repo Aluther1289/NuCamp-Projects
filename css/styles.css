@@ -1,65 +1,62 @@
+/*Here I am setting up SCSS Variables.*/
+/*Then we add the variables where the corresponding codes are used in the css */
 /*Here we set the font family for the non specified texts on the page. Open
 Sans should be seen, but if a browser does not support it, then the default
 font of sans-serif will be seen.*/
-body{
-    font-family: "Open Sans", sans-serif;
-}
+body {
+  font-family: "Open Sans", sans-serif; }
 
 /*Here we set a font for h1, h2, and h3 elements. If supported, Lobster will be seen
 if the browser doesn't support it, then cursive is shown.*/
-h1, h2, h3{
-    font-family: "Lobster", cursive;
-}
+h1, h2, h3 {
+  font-family: "Lobster", cursive; }
 
 /*Here we specify the text color for h2 elements*/
-h2{
-    color: #3046C5;
-}
+h2 {
+  color: #3046C5; }
 
 /*Here we target h2 elements that are descendants of header elements only.*/
-header h2{
-    color: #CEC8FF;
-}
+header h2 {
+  color: #CEC8FF; }
 
 /*This targets the footer. Puts a gradient background on it, also with padding.*/
-.site-footer{
-    background-image: linear-gradient(#CEC8FF, white);
-    padding: 20px 0;
-}
+.site-footer {
+  background-image: linear-gradient(#CEC8FF, white);
+  padding: 20px 0; }
 
 /*The .jumbotron class gets targeted, and padding, color, and background is applied. We also put the margin to 0 to take out unwanted space between the jumbotron and navbar.*/
-.jumbotron{
-    margin: 0;
-    padding: 30px;
-    background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
-    color: white;
-}
+.jumbotron {
+  margin: 0;
+  padding: 30px;
+  background-image: linear-gradient(to right, #5637DD, #3046C5, #60106B);
+  color: white; }
 
 /*This targets the navbar and gives it a background color*/
-.navbar{
-    background-color: #901CAD;
-}
+.navbar {
+  background-color: #901CAD; }
 
 /*The class .row-content is targeted here. padding, border-bottom, and a minimum height are specified.*/
-.row-content{
-    padding: 50px 0;
-    border-bottom: 1px ridge;
-    min-height: 200px;
-}
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px; }
 
-.tab-content{
-    border: 1px solid #DDD;
-    border-top: none;
-    padding: 10px;
-}
+.tab-content {
+  border: 1px solid #DDD;
+  border-top: none;
+  padding: 10px; }
 
-.carousel-caption{
-    background-color: rgba(0,0,0,0.5);
-}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5); }
 
-.carousel{
-    border: solid #5637DD;
-}
+.carousel {
+  border: solid #5637DD; }
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
 
 /* My borders showing different div  
 .col, div[class^="col-"], label[class^="col-"] {

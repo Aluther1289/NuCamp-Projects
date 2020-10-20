@@ -58,7 +58,13 @@ the commas after the lines, except for the last line in the script section.-->
             <h2>a better way to camp</h2>
           </div>
           <div class="col-md-4 col-xl-2 mt-4">
-              <a role="button" class="btn btn-lg btn-info" data-toggle="modal" data-target="#reserveModal">Reserve Campsite</a>
+            <a
+              role="button"
+              class="btn btn-lg btn-info"
+              data-toggle="modal"
+              data-target="#reserveModal"
+              >Reserve Campsite</a
+            >
           </div>
         </div>
       </div>
@@ -74,7 +80,9 @@ the commas after the lines, except for the last line in the script section.-->
             <!--Here we add an h3 element with the class of "modal-title" and the content of Login-->
             <h3 class="modal-title">Reserve</h3>
             <!--Now we add a button element. type of "button", class of "close", data-dismiss of "modal", then the content of "&times" to make an "x" symbol.-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
           </div>
           <!--Here we set up the "modal-body" with a div element and class.-->
           <div class="modal-body">
@@ -83,50 +91,87 @@ the commas after the lines, except for the last line in the script section.-->
               <!--Now we add a form element for the user to fill out.-->
               <form>
                 <div class="form-group row">
-                            <label for="numCampers" class="col-sm-6 col-form-label">Number of Campers</label>
-                            <div class="col">
-                                <select name="numCampers" id="numCampers" class="form-control">
-                                    <option value="select">Select...</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="date" class="col-sm-6 col-form-label">Date</label>
-                            <div class="col">
-                                <input type="date" id="date" name="date" placeholder="date" class="form-control">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label class="col-form-label col-sm-6">Campsite Type</label>
-                            <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-success active">
-                                  <input type="radio" name="siteType" id="siteTent" value="tent" autocomplete="off" checked> Tent
-                                </label>
-                                <label class="btn btn-primary">
-                                  <input type="radio" name="siteType" id="siteRV" value="RV" autocomplete="off"> RV
-                                </label>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col">
-                              <button type="button" class="btn btn-secondary ml-auto" data-dismiss="modal">Cancel</button>  
-                              <button type="submit" class="btn btn-primary">Search</button>
-                            </div>
-                        </div>
-
+                  <label for="numCampers" class="col-sm-6 col-form-label"
+                    >Number of Campers</label
+                  >
+                  <div class="col">
+                    <select
+                      name="numCampers"
+                      id="numCampers"
+                      class="form-control"
+                    >
+                      <option value="select">Select...</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label for="date" class="col-sm-6 col-form-label">Date</label>
+                  <div class="col">
+                    <input
+                      type="date"
+                      id="date"
+                      name="date"
+                      placeholder="date"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <label class="col-form-label col-sm-6">Campsite Type</label>
+                  <div
+                    class="col-2 btn-group btn-group-toggle"
+                    data-toggle="buttons"
+                  >
+                    <label class="btn btn-success active">
+                      <input
+                        type="radio"
+                        name="siteType"
+                        id="siteTent"
+                        value="tent"
+                        autocomplete="off"
+                        checked
+                      />
+                      Tent
+                    </label>
+                    <label class="btn btn-primary">
+                      <input
+                        type="radio"
+                        name="siteType"
+                        id="siteRV"
+                        value="RV"
+                        autocomplete="off"
+                      />
+                      RV
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col">
+                    <button
+                      type="button"
+                      class="btn btn-secondary ml-auto"
+                      data-dismiss="modal"
+                    >
+                      Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                      Search
+                    </button>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
     <div id="loginModal" class="modal fade" role="dialog">
       <!--Then another div with the class of "modal-dialog" and a role of "document"-->
       <div class="modal-dialog" role="document">
@@ -137,7 +182,9 @@ the commas after the lines, except for the last line in the script section.-->
             <!--Here we add an h3 element with the class of "modal-title" and the content of Login-->
             <h3 class="modal-title">Login</h3>
             <!--Now we add a button element. type of "button", class of "close", data-dismiss of "modal", then the content of "&times" to make an "x" symbol.-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
           </div>
           <!--Here we set up the "modal-body" with a div element and class.-->
           <div class="modal-body">
@@ -147,23 +194,43 @@ the commas after the lines, except for the last line in the script section.-->
               <form>
                 <div class="form-row">
                   <div class="form-group col-12">
-                    <label class="sr-only" for="loginEmail">Email address</label>
-                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                    <label class="sr-only" for="loginEmail"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      id="loginEmail"
+                      placeholder="Enter email"
+                    />
                   </div>
                   <div class="form-group col-12">
                     <label class="sr-only" for="loginPassword">Password</label>
-                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                    <input
+                      type="password"
+                      class="form-control form-control-sm"
+                      id="loginPassword"
+                      placeholder="Password"
+                    />
                   </div>
                   <div class="col">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox">
+                      <input class="form-check-input" type="checkbox" />
                       <label class="form-check-label"> Remember Me</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-row">
-                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    Sign In
+                  </button>
                 </div>
               </form>
             </div>
@@ -246,7 +313,9 @@ the commas after the lines, except for the last line in the script section.-->
             <!--Here we add an h3 element with the class of "modal-title" and the content of Login-->
             <h3 class="modal-title">Login</h3>
             <!--Now we add a button element. type of "button", class of "close", data-dismiss of "modal", then the content of "&times" to make an "x" symbol.-->
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
           </div>
           <!--Here we set up the "modal-body" with a div element and class.-->
           <div class="modal-body">
@@ -256,23 +325,43 @@ the commas after the lines, except for the last line in the script section.-->
               <form>
                 <div class="form-row">
                   <div class="form-group col-12">
-                    <label class="sr-only" for="loginEmail">Email address</label>
-                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter email">
+                    <label class="sr-only" for="loginEmail"
+                      >Email address</label
+                    >
+                    <input
+                      type="email"
+                      class="form-control form-control-sm"
+                      id="loginEmail"
+                      placeholder="Enter email"
+                    />
                   </div>
                   <div class="form-group col-12">
                     <label class="sr-only" for="loginPassword">Password</label>
-                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                    <input
+                      type="password"
+                      class="form-control form-control-sm"
+                      id="loginPassword"
+                      placeholder="Password"
+                    />
                   </div>
                   <div class="col">
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox">
+                      <input class="form-check-input" type="checkbox" />
                       <label class="form-check-label"> Remember Me</label>
                     </div>
                   </div>
                 </div>
                 <div class="form-row">
-                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
-                  <button type="submit" class="btn btn-primary btn-sm ml-1">Sign In</button>
+                  <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    Sign In
+                  </button>
                 </div>
               </form>
             </div>
@@ -292,7 +381,11 @@ the commas after the lines, except for the last line in the script section.-->
             <!--Right under the carousel start div, we add the carousel indicators. Wes et the data-target as "#homeCarousel", the data-slide-to as "0" to "2", and the first one gets the class
             of active.-->
             <ol class="carousel-indicators">
-              <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+              <li
+                data-target="#homeCarousel"
+                data-slide-to="0"
+                class="active"
+              ></li>
               <li data-target="#homeCarousel" data-slide-to="1"></li>
               <li data-target="#homeCarousel" data-slide-to="2"></li>
             </ol>
@@ -301,57 +394,89 @@ the commas after the lines, except for the last line in the script section.-->
               <div class="carousel-item active">
                 <!--Here we add the img element, with the classes "d-block" and "w-100". The d-block and w-100 classes are Bootstrap display and 
                 sizing utility classes. They set the image display property to block and the image width property to 100%, which prevents the browser's default image alignment from interfering. -->
-                <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
-                  <div class="carousel-caption">
-                    <h3>Breadcrumb Trail Campground</h3>
-                    <p class="d-none d-sm-block">Let Nucamp be your guide to this off-the-beaten-path, hike-in-only campground. </p>
-                  </div>
+                <img
+                  class="d-block w-100"
+                  src="img/breadcrumb-trail.jpg"
+                  alt="Breadcrumb Trail Campground"
+                />
+                <div class="carousel-caption">
+                  <h3>Breadcrumb Trail Campground</h3>
+                  <p class="d-none d-sm-block">
+                    Let Nucamp be your guide to this off-the-beaten-path,
+                    hike-in-only campground.
+                  </p>
+                </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
-                  <div class="carousel-caption">
-                    <h3>React Lake Campground</h3>
-                    <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
-                  </div>
+                <img
+                  class="d-block w-100"
+                  src="img/react-lake.jpg"
+                  alt="React Lake Campground"
+                />
+                <div class="carousel-caption">
+                  <h3>React Lake Campground</h3>
+                  <p class="d-none d-sm-block">
+                    Nestled in the foothills of the Chrome Mountains, this
+                    campground on the shores of the pristine React Lake is a
+                    favorite for fly fishers.
+                  </p>
+                </div>
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
-                  <div class="carousel-caption">
-                    <h3>Chrome River Campground</h3>
-                    <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy of old-growth first at this enchanting spot by the Chrome River.</p>
-                  </div>
+                <img
+                  class="d-block w-100"
+                  src="img/chrome-river.jpg"
+                  alt="Chrome River Campground"
+                />
+                <div class="carousel-caption">
+                  <h3>Chrome River Campground</h3>
+                  <p class="d-none d-sm-block">
+                    Spend a few sunny days and starry nights beneath a canopy of
+                    old-growth first at this enchanting spot by the Chrome
+                    River.
+                  </p>
+                </div>
               </div>
             </div>
             <!--Between the end tag for the carousel-inner div and the end tag for the carousel div, we add the controls for the carousel. We use an <a> element with the classes of "carousel-control-prev"
               for previous. With an href of "#homeCarousel", a role of "button", and a data-slide of "prev".-->
-            <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+            <a
+              class="carousel-control-prev"
+              href="#homeCarousel"
+              role="button"
+              data-slide="prev"
+            >
               <!--Here we add the <span> element with the class of "carousel-control-prev-icon". This makes the actual button.-->
               <span class="carousel-control-prev-icon"></span>
               <!--Ths is text that actual screen readers would see.-->
               <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+            <a
+              class="carousel-control-next"
+              href="#homeCarousel"
+              role="button"
+              data-slide="next"
+            >
               <span class="carousel-control-next-icon"></span>
               <span class="sr-only">Next</span>
             </a>
             <!--Here we add another div so we can add play and pause buttons to the carousel. We give it a class of "btn-group", and an id of "carouselButton"-->
             <!--Then we delete it so that there is only going to be one button. If there is one button we do not need a div to contain it, so we delete it. But instead of deleting, I am just commenting it out.-->
             <!--<div class-"btn-group" id="carouselButton"-->
-              <!--Here we are adding the pause button. We use a button element, with the classes of "btn", "btn-danger" for the color to be red, and "btn-sm" for it to be small.
+            <!--Here we are adding the pause button. We use a button element, with the classes of "btn", "btn-danger" for the color to be red, and "btn-sm" for it to be small.
               We also give it the id of "carouselPause".-->
-              <!--We rename the id to "carouselButton" to get back our css properties on the button.-->
-              <button class="btn btn-danger btn-sm" id="carouselButton">
-                <!--Here we use an <i> element to put on the bootstrap classes of "fa" and "fa-pause"-->
-                <i class="fa fa-pause"></i>
-              </button>
-              <!--Here we had the play button, but we deleted it so that we only have one button now, but instead of deleting it I am commenting it out.-->
-              <!--<button class="btn btn-danger btn-sm" id="carouselPlay">
+            <!--We rename the id to "carouselButton" to get back our css properties on the button.-->
+            <button class="btn btn-danger btn-sm" id="carouselButton">
+              <!--Here we use an <i> element to put on the bootstrap classes of "fa" and "fa-pause"-->
+              <i class="fa fa-pause"></i>
+            </button>
+            <!--Here we had the play button, but we deleted it so that we only have one button now, but instead of deleting it I am commenting it out.-->
+            <!--<button class="btn btn-danger btn-sm" id="carouselPlay">
                 <i class="fa fa-play"></i>
               </button>-->
-            
           </div>
         </div>
-      </div>      
+      </div>
       <!--Notice we added a row-content class to some rows. This is for CSS purposes.-->
       <div class="row row-content align-items-center">
         <!--We add col-sm-4 to specify that when the page is small or higher, this 1st column will take up 3 out of the 12 spots. Then we specify
@@ -390,19 +515,21 @@ the commas after the lines, except for the last line in the script section.-->
         <!--Notice the subject of this section is in the specified column above, and the less important information
             takes up the remaining column slots below.-->
         <div class="col">
-            <div class="media">
-                <div class="media-body align-self-center">
-                    <h3>React Lake Campground</h3>
-                    <p class="d-none d-sm-block">
-                    Nestled in the foothills of the Chrome Mountains, this campground on
-                    the shores of the pristine React Lake is a favorite for fly fishers.
-                    </p>
-                </div>
-                <img class="d-flex ml-3 img-thumbnail" 
-                src="img/react-lake-thumb.jpg" 
-                alt="React Lake" 
-                />
+          <div class="media">
+            <div class="media-body align-self-center">
+              <h3>React Lake Campground</h3>
+              <p class="d-none d-sm-block">
+                Nestled in the foothills of the Chrome Mountains, this
+                campground on the shores of the pristine React Lake is a
+                favorite for fly fishers.
+              </p>
             </div>
+            <img
+              class="d-flex ml-3 img-thumbnail"
+              src="img/react-lake-thumb.jpg"
+              alt="React Lake"
+            />
+          </div>
         </div>
       </div>
 
@@ -416,8 +543,8 @@ the commas after the lines, except for the last line in the script section.-->
         <!--Notice how we put the Topic of these rows in the first specified columns, and the information in the rest of the columns. This makes for easier 
             and more pleasurable viewing for the users.-->
         <div class="col">
-            <!--We wrap this all in a media div.-->
-            <div class="media">
+          <!--We wrap this all in a media div.-->
+          <div class="media">
             <!--The classes d-flex is recommended from bootstrap that fixes a bug in internet explorer, mr-3 means adds a margin to the right, image thumbnail gives rounded border-->
             <img
               class="d-flex mr-3 img-thumbnail"
@@ -500,27 +627,13 @@ the commas after the lines, except for the last line in the script section.-->
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
-    <script>
+    <script src="js/scripts.js">
       //$(function(){
 
       //}
 
       //Here we add the JQuery function to make the play and pause buttons work in the carousel.
-      $(function() {
-        $(".carousel").carousel( { interval: 2000} );
-        $("#carouselButton").click(function(){
-          if ($("#carouselButton").children("i").hasClass("fa-pause")) {
-            $(".carousel").carousel("pause");
-            $("#carouselButton").children("i").removeClass("fa-pause");
-            $("#carouselButton").children("i").addClass("fa-play");
-          } else {
-            $(".carousel").carousel("cycle");
-            $("#carouselButton").children("i").removeClass("fa-play");
-            $("#carouselButton").children("i").addClass("fa-pause");
-          }
-        });
-      });
+     
     </script>
-
   </body>
 </html>
