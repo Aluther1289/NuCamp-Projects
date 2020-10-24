@@ -1,72 +1,108 @@
 /*Here I am setting up SCSS Variables.*/
+$color-primary: #3046c5;
+$color-secondary: #5637dd;
+$color-pale: #cec8ff;
+$color-mid: #901cad;
+$color-dark: #60106b;
+$color-black-transparent: rgba(0, 0, 0, 0.5);
+$color-teal: #17a2b8;
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
 /*Then we add the variables where the corresponding codes are used in the css */
+
 /*Here we set the font family for the non specified texts on the page. Open
 Sans should be seen, but if a browser does not support it, then the default
 font of sans-serif will be seen.*/
 body {
-  font-family: "Open Sans", sans-serif; }
+  font-family: $body-font;
+}
 
 /*Here we set a font for h1, h2, and h3 elements. If supported, Lobster will be seen
 if the browser doesn't support it, then cursive is shown.*/
 h1,
 h2,
 h3 {
-  font-family: "Lobster", cursive; }
+  font-family: $header-font;
+}
 
 /*Here we specify the text color for h2 elements*/
 h2 {
-  color: #3046c5; }
+  color: $color-primary;
+}
 
 /*Here we target h2 elements that are descendants of header elements only.*/
-header h2 {
-  color: #cec8ff; }
+header {
+  h2 {
+    color: $color-pale;
+  }
+}
 
 /*This targets the footer. Puts a gradient background on it, also with padding.*/
 .site-footer {
-  background-image: linear-gradient(#cec8ff, white);
-  padding: 20px 0; }
+  background-image: linear-gradient($color-pale, white);
+  padding: 20px 0;
+}
 
 /*The .jumbotron class gets targeted, and padding, color, and background is applied. We also put the margin to 0 to take out unwanted space between the jumbotron and navbar.*/
 .jumbotron {
   margin: 0;
   padding: 30px;
-  background-image: linear-gradient(to right, #5637dd, #3046c5, #60106b);
-  color: white; }
+  background-image: linear-gradient(
+    to right,
+    $color-secondary,
+    $color-primary,
+    $color-dark
+  );
+  color: white;
+}
 
 /*This targets the navbar and gives it a background color*/
 .navbar {
-  background-color: #901cad; }
+  background-color: $color-mid;
+}
 
 /*The class .row-content is targeted here. padding, border-bottom, and a minimum height are specified.*/
 .row-content {
   padding: 50px 0;
   border-bottom: 1px ridge;
-  min-height: 200px; }
+  min-height: 200px;
+}
 
 .tab-content {
   border: 1px solid #ddd;
   border-top: none;
-  padding: 10px; }
+  padding: 10px;
+}
 
 .carousel-caption {
-  background-color: rgba(0, 0, 0, 0.5); }
+  background-color: $color-black-transparent;
+}
 
 .carousel {
-  border: solid #5637dd; }
+  border: solid $color-secondary;
+}
 
 #carouselButton {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 100; }
+  z-index: 100;
+}
 
-#reserveModal .modal-header {
-  background-color: #17a2b8;
-  color: white; }
+#reserveModal {
+  .modal-header {
+    background-color: $color-teal;
+    color: white;
+  }
+}
 
-#loginModal .modal-header {
-  background-color: #901cad;
-  color: white; }
+#loginModal {
+  .modal-header {
+    background-color: $color-mid;
+    color: white;
+  }
+}
 
 /* My borders showing different div
 .col,
